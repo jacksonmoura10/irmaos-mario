@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo-mario {
+    height: 200px;
+}
+
+.texto {
+    color: rgb(254, 252, 252);
+}
+
+button {
+    color: white;
+    background-color: #c51111;
+    border-radius: 3px;
+    border: none;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.imagem-mario-luigi {
+    height: 500px;
+}
+
+body {
+    height: 100vh;
+}
+
+.caixa-mae {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 100px;
+    height: 100vh;
+}
+
+.container {
+    width: 40%;
+}
+
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    overflow: hidden;
+}
+
+video {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.mascara {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.7) 15%, rgba(10, 12, 16, 0.4) 50%, rgba(10, 12, 16, 0.7) 85%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+p {
+    color: #fff;
+    font-size: 20px;
+}
+
+.link-whatsapp img {
+    height: 60px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+    animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+
+
+/* Quando o usuário passar o mouse, ele balança */
+.link-whatsapp img:hover {
+    animation: shake 0.5s;
+} 
+
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 30px;
+}
+
+.header img {
+    height: 60px;
+}
+
+.header a {
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.header a:hover {
+    color: #c51111;
+    font-size: 26px;
+    transition: 0.5s ease-in-out;
+}
+
+button:hover {
+    background-color: #c51111;
+    color: #fff;
+    font-size: 14px;
+    transition: 0.5s ease-in-out;
+}
+
+
+.formulario-fale-conosco {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 30%;
+    left: -300px;
+    padding: 20px;
+    border-radius: 5px;
+    gap: 15px;
+    transition: 0.5s ease-in-out;
+    z-index: 2;
+}
+
+input {
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left: 5px;
+    outline-color: #18d80f;
+}
+
+textarea {
+    width: 270px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left: 5px;
+    outline-color: #18d80f;
+}
+
+.mascara-formulario {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(10, 12, 16, 0.5);
+    z-index: 1;
+    pointer-events: none;
+}
+/* Estilizando a página de serviços */
+.pagina-servicos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Centraliza na tela */
+    background: linear-gradient(to right, #ffcc00, #ff6600); /* Fundo gradiente */
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.pagina-servicos h1 {
+    font-size: 36px;
+    color: #c51111;
+    margin-bottom: 20px;
+}
+
+.pagina-servicos ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pagina-servicos ul li {
+    font-size: 22px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+/* Estilizando o botão de volta */
+.botao-voltar {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #c51111;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao-voltar:hover {
+    background-color: #ff0000;
+}
+
+
+
+
+/* Responsividade */
+@media (max-width: 1000px) {
+    p {
+        display: none;
+    }
+    .caixa-mae {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .imagem-mario-luigi {
+        max-width: 80vw;
+        height: auto;
+    }
+    .header {
+        margin: 20px;
+        justify-content: center;
+    }
+    .header img {
+        display: none;
+    }
+    .header a {
+        font-size: 18px;
+    }
+}
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mario Bros</title>
+</head>
+
+<body>
+    <div class="mascara-formulario">
+
+    </div>
+
+    <div class="header">
+        <img src="assets/logo-header.png" alt="logo mario">
+        <a href="index.html">Home</a>
+        <a href="nossos-servicos.html">Nossos Serviços</a>
+        <a href="#" onclick="mostrarFormulario()">Fale Conosco</a>
+
+
+    </div>
+    <div class="caixa-mae">
+        <div class="container">
+            <img class="logo-mario" src="assets/logo.png" alt="logo do mario bros">
+            <p>Transformando ideias em experiências digitais com design de qualidade.</p>
+            <p>Você já teve dificuldades para criar uma interface de usuário intuitiva e responsiva?</p>
+
+            <button onclick="cliqueiNoBotao()">ENTRE EM CONTATO</button>
+        </div>
+
+        <div>
+            <img src="assets/mario.png" alt="logo mario e luigi" class="imagem-mario-luigi">
+        </div>
+
+        <div class="video-container">
+            <video src="assets/video.mp4" autoplay muted loop></video>
+        </div>
+        <div class="mascara"></div>
+    </div>
+
+    <a href="https://api.whatsapp.com/send?phone=+5533999886976&text=Olá,%20quero%20ajuda%20dos%20irmãos%20Mario!"
+        target="_blank" class="link-whatsapp">
+        <img src="assets/whatsapp.png" alt="Botão do WhatsApp">
+    </a>
+    <form class="formulario-fale-conosco" action="https://formcarry.com/s/bJN9xf30hgq" method="POST" enctype="multipart/form-data">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+    
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="Seu telefone" required>
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Seu email" required>
+    
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" placeholder="Digite seu problema aqui..." required></textarea>
+    
+        <button type="submit">Pedir orçamento</button>
+    </form>
+    
+
+
+</body>
+<script src="scripts.js"></script>
+
+</html>
